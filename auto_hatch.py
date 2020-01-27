@@ -167,6 +167,11 @@ hatched_eggs = 0
 sleep(2)
 send('Button LCLICK', 0.5)
 
-while hatched_eggs < args.count:
-    get5eggs()
-    sendToBox()
+try:
+    while hatched_eggs < args.count:
+        get5eggs()
+        sendToBox()
+
+except KeyboardInterrupt:
+    send('RELEASE')
+    ser.close()
