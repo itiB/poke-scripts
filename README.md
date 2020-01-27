@@ -13,6 +13,8 @@
 - Switchとマイコンをつなぐケーブル(どちらか)
   - microUSB to Type-AケーブルでSwitchのドックにつなぐ
   - microUSB to Type-CケーブルでSwitchに直接つなぐ
+- PCとマイコンをつなぐケーブル
+  - microUSB to Type-Aケーブル
 - [itiB/Switch-Fightstick](https://github.com/itiB/Switch-Fightstick)
   - Fork元のEbithさんのに加えジョイコン左右同時に入力する機能が(~~無理やり~~)付け加えられています
 - Python 3.6以上
@@ -53,4 +55,3 @@ $ git pull
   - `--count <孵化数>`  : 何匹孵化させるか設定する(デフォルト60匹)
   - `--cycle <孵化サイクル>`    : 孵化サイクル(デフォルト20)
     - 孵化対象のポケモンのタマゴ歩数によって変更 (<https://yakkun.com/swsh/zukan/> を参照)
-
