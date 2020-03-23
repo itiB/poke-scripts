@@ -19,7 +19,7 @@ ser = serial.Serial(args.port, 9600)
 
 
 def daychange():
-    send('Button HOME', 0.1)
+    send('Button HOME', 0.2)
     sleep(0.5)
     send('LY MAX', 0.1)
     sleep(0.2)
@@ -131,7 +131,8 @@ def drawid():
     sleep(0.5)
 
 sleep(3)
-send('Button LCLICK', 0.1)
+send('Button LCLICK', 0.2)
+sleep(0.3)
 
 try:
     while 1:
