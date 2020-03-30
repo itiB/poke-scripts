@@ -93,7 +93,7 @@ $ git pull
 
 - `$ python3 drawid.py <USB接続ポート>`
 
-### 経験値アメ集め (candy_correct.py)
+### 経験値アメ集め (candy_collect.py)
 
 ねがいのかたまりがある限りひたすら同じ巣穴でレイドバトルし続ける．  
 巣穴から出てきたポケモンはすべて捕まえない．
@@ -120,7 +120,7 @@ $ git pull
 
 使用方法:
 
-- `$ python3 candy_correct.py <USB接続ポート>`
+- `$ python3 candy_collect.py <USB接続ポート>`
 
 ### 木の実集め (correct_nuts.py)
 
