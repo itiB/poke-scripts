@@ -77,39 +77,35 @@ def daychange():
 def getnuts():
     send('LY MIN', 0.1) # 上を向く
     sleep(0.1)
-    send('Button A', 0.1)
+    send('Button A', 0.1) # 木を向く
     sleep(0.2)
-    send('Button A', 0.1)
+    send('Button A', 0.1) # 話しかける
     sleep(0.2)
-    send('Button A', 0.1)
+    send('Button A', 0.1) # 揺らしてみますか
     sleep(4)
 
     send('Button A', 0.1) # 収穫一回目
     sleep(1.5)
-    send('LY MAX', 0.1)
+    send('LY MAX', 0.1) # もう一度揺らしますか(1個のみ)
     sleep(0.1)
     send('Button A', 0.1)
     sleep(1.5)
-    send('LY MAX', 0.1) # もっと揺らす
+    send('LY MAX', 0.1) # もう一度揺らしますか(2, 3個の時)
     sleep(0.1)
-    send('Button A', 0.1) # Get 3 nuts
+    send('Button A', 0.1) # 拾い上げた，いいえ，いいえ
     sleep(1.5)
-    send('LY MAX', 0.1) # もっと揺らす
+    send('Button A', 0.1) # 木の実1をN個手に入れた
+    sleep(1.5)
+    send('Button A', 0.1) # 木の実2をN個手に入れた
+    sleep(1.5)
+    send('LY MAX', 0.1) # 下を向く(2個)
     sleep(0.1)
-    send('Button A', 0.1) # Get 3 nuts
+    send('Button A', 0.1) # 木の実3を手に入れた
     sleep(1.5)
-    send('Button A', 0.1) # Get 3 nuts
-    sleep(1.5)
-    send('LY MAX', 0.1) # もっと揺らす
+    send('LY MAX', 0.1)
     sleep(0.1)
-    send('Button A', 0.1) # Get 3 nuts
-    sleep(1.5)
-    send('LY MAX', 0.1) # もっと揺らす
-    sleep(0.1)
-    send('Button A', 0.1) # Get 3 nuts
+    send('Button A', 0.1)
     sleep(1)
-    # send('LY MAX', 0.1) # もっと揺らす
-    # sleep(1)
 
 sleep(2)
 send('Button LCLICK', 0.2)
