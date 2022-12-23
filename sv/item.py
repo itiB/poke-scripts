@@ -12,8 +12,9 @@ COMMAND:
 SETING:
     0. 'pip3 install pyserial'
     1. @PowerShell: Find out which port to connect. `usbipd wsl list`
-    2. `usbipd wsl attach --busid <BUSID> --distribution docker-desktop`
+    2. `usbipd wsl attach --distribution Ubuntu-20.04 --busid <BUSID>`
     3. Search connected USB list from`lsusb`
+    4. `sudo chmod 777 /dev/ttyUSB0`
     Finaly: `usbipd wsl detach --busid <busid>`
 
 USAGE:
@@ -44,60 +45,58 @@ def main():
 
     try:
         for _ in range(0, args.loop):
-            send('Button X', 0.1)
-            sleep(0.1)
-            send('Button X', 0.1)
-            sleep(0.1)
-            send('Button L', 0.1)
+            send('Button X', 0.2)
             sleep(0.2)
+            send('Button X', 0.2)
+            sleep(0.3)
+            send('Button L', 0.2)
+            sleep(0.3)
 
             # Select Koraidon
-            send('Button A', 0.1)
+            send('Button A', 0.2)
             sleep(0.2)
-            send('LY MIN', 0.1)
-            sleep(0.1)
-            send('LY MIN', 0.1)
-            sleep(0.1)
-            send('LY MIN', 0.1)
-            sleep(0.1)
-            send('Button A', 0.1)
-            sleep(0.4)
-            # send('Button B', 0.1)
-            # sleep(0.1)
+            send('LY MIN', 0.2)
+            sleep(0.2)
+            send('LY MIN', 0.2)
+            sleep(0.2)
+            send('LY MIN', 0.2)
+            sleep(0.2)
+            send('Button A', 0.2)
+            sleep(0.6)
 
             count += 1
             print("  counter: {}/{}".format(count, args.loop))
 
             # Close box
-            send('Button B', 0.1)
-            sleep(3.2)
+            send('Button B', 0.2)
+            sleep(2.4)
 
             # Change to Ride form
-            send('LX MIN', 0.1)
+            send('LX MIN', 0.2)
+            sleep(0.4)
+            send('Button A', 0.2)
+            sleep(0.4)
+            send('LY MIN', 0.2)
+            sleep(0.2)
+            send('LY MIN', 0.2)
+            sleep(0.2)
+            send('Button A', 0.2)
+            sleep(0.9)
+            send('Button A', 0.2)
             sleep(0.3)
-            send('Button A', 0.1)
-            sleep(0.2)
-            send('LY MIN', 0.1)
-            sleep(0.1)
-            send('LY MIN', 0.1)
-            sleep(0.1)
-            send('Button A', 0.1)
-            sleep(0.7)
-            send('Button A', 0.1)
-            sleep(0.2)
-            send('Button A', 0.1)
-            sleep(2.5)
-            send('Button A', 0.1)
-            sleep(0.7)
+            send('Button A', 0.2)
+            sleep(2.7)
+            send('Button A', 0.2)
+            sleep(1.0)
 
             # Open Box
-            send('LX MAX', 0.1)
-            sleep(0.3)
-            send('LY MAX', 0.1)
-            sleep(0.1)
-            send('LY MAX', 0.1)
-            sleep(0.1)
-            send('Button A', 0.1)
+            send('LX MAX', 0.2)
+            sleep(0.4)
+            send('LY MAX', 0.2)
+            sleep(0.2)
+            send('LY MAX', 0.2)
+            sleep(0.2)
+            send('Button A', 0.2)
             sleep(3.0)
 
     except KeyboardInterrupt:
